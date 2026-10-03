@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aria &amp; Julian — Wedding Invitation</title>
+  <meta name="description" content="Join us as we celebrate our wedding. Event details, our story, gallery and RSVP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reusable floral ornament -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="leaf-branch" viewBox="0 0 200 40">
+        <path d="M5 20 C60 20 140 20 195 20" fill="none" stroke="currentColor" stroke-width="1"/>
+        <g fill="currentColor" opacity=".85">
+          <path d="M40 20 c6-10 18-12 24-10 c-4 6-14 12-24 10z"/>
+          <path d="M40 20 c6 10 18 12 24 10 c-4-6-14-12-24-10z"/>
+          <path d="M136 20 c-6-10-18-12-24-10 c4 6 14 12 24 10z"/>
+          <path d="M136 20 c-6 10-18 12-24 10 c4-6 14-12 24-10z"/>
+          <circle cx="100" cy="20" r="4"/>
+          <circle cx="88" cy="20" r="2"/>
+          <circle cx="112" cy="20" r="2"/>
+        </g>
+      </symbol>
+      <symbol id="heart" viewBox="0 0 24 24">
+        <path d="M12 21s-7.5-4.6-10-9.2C.3 8.4 2.2 4 6.3 4c2.3 0 3.9 1.4 5.7 3.4C13.8 5.4 15.4 4 17.7 4 21.8 4 23.7 8.4 22 11.8 19.5 16.4 12 21 12 21z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__brand">A <span>&amp;</span> J</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#couple">Couple</a>
+      <a href="#story">Our Story</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#rsvp" class="nav__cta">RSVP</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__bg photo" data-img="images/hero.jpg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content reveal">
+      <p class="eyebrow">We're getting married</p>
+      <h1 class="script hero__names">Aria <span>&amp;</span> Julian</h1>
+      <svg class="ornament ornament--light"><use href="#leaf-branch"/></svg>
+      <p class="hero__date">Saturday · 12 June 2027</p>
+      <p class="hero__place">The Glasshouse Garden, Lake Como</p>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div><span data-unit="days">00</span><small>Days</small></div>
+        <div><span data-unit="hours">00</span><small>Hours</small></div>
+        <div><span data-unit="minutes">00</span><small>Minutes</small></div>
+        <div><span data-unit="seconds">00</span><small>Seconds</small></div>
+      </div>
+
+      <a href="#rsvp" class="btn btn--light">Kindly RSVP</a>
+    </div>
+    <a href="#intro" class="hero__scroll" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ============ INTRO / INVITATION ============ -->
+  <section class="section intro" id="intro">
+    <div class="container narrow reveal">
+      <svg class="icon-heart"><use href="#heart"/></svg>
+      <p class="intro__quote">
+        “Two souls with but a single thought,<br>two hearts that beat as one.”
+      </p>
+      <p class="intro__text">
+        Together with our families, we joyfully invite you to share in the celebration
+        of our marriage. Your presence would make our day complete.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ COUPLE ============ -->
+  <section class="section couple" id="couple">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">Happy couple</p>
+        <h2 class="script">Bride &amp; Groom</h2>
+        <svg class="ornament"><use href="#leaf-branch"/></svg>
+      </header>
+
+      <div class="couple__grid">
+        <article class="person reveal">
+          <div class="person__frame">
+            <div class="photo person__photo" data-img="images/bride.jpg" data-initial="A"></div>
+          </div>
+          <h3 class="script">Aria Bennett</h3>
+          <p class="person__role">The Bride</p>
+          <p>Daughter of Mr. &amp; Mrs. Bennett. A lover of old books, sunrise walks and
+            anything with lemon. Aria teaches art and still blushes when Julian sings off-key.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </article>
+
+        <div class="couple__amp script reveal" aria-hidden="true">&amp;</div>
+
+        <article class="person reveal">
+          <div class="person__frame">
+            <div class="photo person__photo" data-img="images/groom.jpg" data-initial="J"></div>
+          </div>
+          <h3 class="script">Julian Moreau</h3>
+          <p class="person__role">The Groom</p>
+          <p>Son of Mr. &amp; Mrs. Moreau. An architect by day and an amateur chef by night,
+            Julian believes every great evening ends with dessert — and dancing.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="section story" id="story">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">How it all began</p>
+        <h2 class="script">Our Love Story</h2>
+        <svg class="ornament"><use href="#leaf-branch"/></svg>
+      </header>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="photo timeline__photo" data-img="images/story-1.jpg"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">Spring 2019</span>
+            <h3>First Meeting</h3>
+            <p>A rainy afternoon, one umbrella and a café with only one free table. We shared it — and talked until closing.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="photo timeline__photo" data-img="images/story-2.jpg"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">Summer 2020</span>
+            <h3>First Date</h3>
+            <p>A picnic by the river that turned into a sunset, then into stargazing. Neither of us wanted to go home.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="photo timeline__photo" data-img="images/story-3.jpg"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">Winter 2025</span>
+            <h3>The Proposal</h3>
+            <p>Back at that same little café, a ring hidden in a slice of lemon cake. She said yes before he finished asking.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="photo timeline__photo" data-img="images/story-4.jpg"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">June 2027</span>
+            <h3>Forever Begins</h3>
+            <p>And now we can't wait to say “I do” surrounded by the people we love most — you.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SAVE THE DATE BANNER ============ -->
+  <section class="banner">
+    <div class="banner__bg photo" data-img="images/banner.jpg"></div>
+    <div class="banner__overlay"></div>
+    <div class="banner__content reveal">
+      <p class="eyebrow">Save the date</p>
+      <h2 class="script">12 · 06 · 2027</h2>
+      <a class="btn btn--light" id="addToCalendar" href="#">Add to Calendar</a>
+    </div>
+  </section>
+
+  <!-- ============ EVENTS ============ -->
+  <section class="section events" id="events">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">When &amp; where</p>
+        <h2 class="script">Wedding Events</h2>
+        <svg class="ornament"><use href="#leaf-branch"/></svg>
+      </header>
+
+      <div class="events__grid">
+        <article class="event reveal">
+          <div class="event__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 6l4 6h-8zM14 20h20v22H14zM10 42h28M20 42V30h8v12M24 12v8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>The Ceremony</h3>
+          <p class="event__time">Saturday, 12 June 2027<br>3:00 PM – 4:00 PM</p>
+          <p>Chapel of San Giovanni<br>Via Regina 12, Lake Como, Italy</p>
+          <a class="btn btn--outline" href="https://maps.google.com/?q=Lake+Como+Italy" target="_blank" rel="noopener">View Map</a>
+        </article>
+
+        <article class="event reveal">
+          <div class="event__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 6h16l-2 14a6 6 0 01-12 0zM24 26v14M16 42h16" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Cocktail Hour</h3>
+          <p class="event__time">Saturday, 12 June 2027<br>4:30 PM – 6:00 PM</p>
+          <p>The Lemon Terrace<br>The Glasshouse Garden, Lake Como</p>
+          <a class="btn btn--outline" href="https://maps.google.com/?q=Lake+Como+Italy" target="_blank" rel="noopener">View Map</a>
+        </article>
+
+        <article class="event reveal">
+          <div class="event__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 40h32M12 40V24h24v16M10 24h28M24 8v8M18 16h12l-2 8H20z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Dinner &amp; Party</h3>
+          <p class="event__time">Saturday, 12 June 2027<br>6:30 PM – Late</p>
+          <p>The Grand Glasshouse<br>The Glasshouse Garden, Lake Como</p>
+          <a class="btn btn--outline" href="https://maps.google.com/?q=Lake+Como+Italy" target="_blank" rel="noopener">View Map</a>
+        </article>
+      </div>
+
+      <div class="dresscode reveal">
+        <p><strong>Dress code:</strong> Garden formal — soft pastels warmly welcomed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">Captured moments</p>
+        <h2 class="script">Our Gallery</h2>
+        <svg class="ornament"><use href="#leaf-branch"/></svg>
+      </header>
+
+      <div class="gallery__grid">
+        <button class="gallery__item gallery__item--tall reveal"><div class="photo" data-img="images/gallery-1.jpg"></div></button>
+        <button class="gallery__item reveal"><div class="photo" data-img="images/gallery-2.jpg"></div></button>
+        <button class="gallery__item reveal"><div class="photo" data-img="images/gallery-3.jpg"></div></button>
+        <button class="gallery__item gallery__item--wide reveal"><div class="photo" data-img="images/gallery-4.jpg"></div></button>
+        <button class="gallery__item reveal"><div class="photo" data-img="images/gallery-5.jpg"></div></button>
+        <button class="gallery__item reveal"><div class="photo" data-img="images/gallery-6.jpg"></div></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="section rsvp" id="rsvp">
+    <div class="container">
+      <div class="rsvp__card reveal">
+        <header class="section__head">
+          <p class="eyebrow">Will you join us?</p>
+          <h2 class="script">RSVP</h2>
+          <svg class="ornament"><use href="#leaf-branch"/></svg>
+          <p class="rsvp__deadline">Kindly respond by <strong>1 May 2027</strong></p>
+        </header>
+
+        <form class="rsvp__form" id="rsvpForm" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <fieldset class="field field--full">
+            <legend>Will you attend?</legend>
+            <div class="choice">
+              <label><input type="radio" name="attending" value="yes" required> Joyfully accept</label>
+              <label><input type="radio" name="attending" value="no"> Regretfully decline</label>
+            </div>
+          </fieldset>
+
+          <div class="field attending-only">
+            <label for="guests">Number of guests</label>
+            <select id="guests" name="guests">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="field attending-only">
+            <label for="meal">Meal preference</label>
+            <select id="meal" name="meal">
+              <option value="">Select…</option>
+              <option>Beef</option>
+              <option>Fish</option>
+              <option>Vegetarian</option>
+              <option>Vegan</option>
+            </select>
+          </div>
+
+          <div class="field field--full">
+            <label for="message">Message for the couple <span class="opt">(optional)</span></label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <p class="form__error" id="formError" role="alert" hidden></p>
+          <button type="submit" class="btn btn--solid field--full">Send RSVP</button>
+        </form>
+
+        <div class="rsvp__thanks" id="rsvpThanks" hidden>
+          <svg class="icon-heart"><use href="#heart"/></svg>
+          <h3 class="script">Thank you!</h3>
+          <p id="thanksText">We've received your response.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WISHES ============ -->
+  <section class="section wishes" id="wishes">
+    <div class="container narrow">
+      <header class="section__head reveal">
+        <p class="eyebrow">Love notes</p>
+        <h2 class="script">Wishes</h2>
+        <svg class="ornament"><use href="#leaf-branch"/></svg>
+      </header>
+      <ul class="wishes__list" id="wishesList">
+        <li class="wish reveal"><p>“So happy for you both! Can't wait to dance the night away by the lake.”</p><span>— Sofia &amp; Marco</span></li>
+        <li class="wish reveal"><p>“Wishing you a lifetime of lemon cake and laughter.”</p><span>— Aunt Clara</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <h2 class="script">Aria &amp; Julian</h2>
+    <svg class="ornament ornament--light"><use href="#leaf-branch"/></svg>
+    <p>12 June 2027 · Lake Como, Italy</p>
+    <p class="footer__tag">#AriaAndJulianForever</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox__img photo" id="lightboxImg"></div>
+  </div>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
