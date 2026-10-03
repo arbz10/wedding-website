@@ -1,6 +1,7 @@
 "use client";
 
 import { wedding, coupleNames } from "@/lib/wedding";
+import Countdown from "./Countdown";
 import Photo from "./Photo";
 import Reveal from "./Reveal";
 
@@ -38,6 +39,7 @@ export default function SaveTheDate() {
       <Reveal className="banner__content">
         <p className="eyebrow">Save the date</p>
         <h2 className="script">{wedding.dateShort}</h2>
+        <Countdown to={wedding.start} />
         <button type="button" className="btn btn--light" onClick={downloadIcs}>
           Add to Calendar
         </button>

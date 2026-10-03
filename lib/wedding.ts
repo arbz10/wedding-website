@@ -27,7 +27,15 @@ export const wedding = {
   location: "The Glasshouse Garden, Lake Como, Italy",
   rsvpBy: "1 May 2027",
   hashtag: "#AriaAndJulianForever",
-  heroImage: "/images/hero.jpg",
+  // Hero collage: arch-bottom photo (left), tall photo (centre), arch-top photo (right).
+  heroPhotos: {
+    left: "/images/hero-left.jpg",
+    center: "/images/hero-center.jpg",
+    right: "/images/hero-right.jpg",
+  },
+  heroIntro: "Two families, one garden by the lake, and a summer evening we'll remember forever.",
+  heroQuote: "Every road we took, however long, was quietly leading us here.",
+  shortAddress: "Via Regina 12 · Lake Como",
   bannerImage: "/images/banner.jpg",
 
   quote: ["Two souls with but a single thought,", "two hearts that beat as one."],
